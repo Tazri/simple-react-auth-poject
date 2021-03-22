@@ -1,0 +1,46 @@
+.search-reasult{
+    
+}
+
+.from-to{
+    background: rgb(255, 0, 255);
+    padding: 10px 15px;
+    border-radius: 9px;
+    color: aliceblue;
+    display: flex;
+}
+
+.progress{
+    background: aliceblue;
+    width: 3px;
+    height: 100px;
+    position: relative;
+}
+
+.circle-div-one,
+.circle-div-two
+{
+    width: 15px;
+    height: 15px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.circle-div-one{
+    
+}
+
+.circle-div-two{
+    bottom: 0px;
+}
+
+
+.from-to > div + div{
+    width: 80%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

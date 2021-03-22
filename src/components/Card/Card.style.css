@@ -13,6 +13,7 @@
     text-align: center;
     color: aliceblue;
     padding: 5px 0px 10px 0px;
+    text-decoration: none;
 }
 
 @media (max-width: 500px){

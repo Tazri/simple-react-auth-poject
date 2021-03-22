@@ -1,0 +1,22 @@
+.search-card{
+    background: rgb(232, 229, 229);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.search-card button{
+    width: 100%;
+    padding: 10px;
+    background: rgb(255, 0, 255);
+    color: aliceblue;
+    border: 2px solid rgb(255, 0, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-card .search-error{
+    color: rgb(255, 0, 255);
+    background: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -6,6 +6,7 @@ import './App.css'
 import LogIn from './components/LogIn/LogIn';
 import SignUp from './components/SignUp/SignUp';
 import Destination from './components/Destination/Destination';
+import Media from './components/Media/Media';
 
 const App = () => {
   return (
@@ -29,6 +30,9 @@ const App = () => {
               <Destination />
           </Route>
 
+          <Route path="/media/:media">
+            <Media />
+          </Route>
         </Switch>
       </Router>
     </UserProvider>

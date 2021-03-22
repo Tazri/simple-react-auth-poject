@@ -1,12 +1,13 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 
 const UserContext = createContext();
 
 const UserProvider = props => {
-    
+    let [isAuthenticate,setIsAuthenticate] = useState(false);
 
     let state = {
-
+        isAuthenticate,
+        setIsAuthenticate
     }
 
     return (

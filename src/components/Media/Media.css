@@ -1,0 +1,33 @@
+.media{
+    background: aliceblue;
+}
+
+.media-line {
+    border-top: 0.1px solid rgba(150, 148, 148, 0.638);
+    margin: 10px 20px 30px 13px;
+}
+
+.media-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 15px;
+}
+
+@media (min-width: 1200px){
+    .media-line{
+        width: 88%;
+        margin: 0px auto;
+    }
+
+    .media-container{
+        width: 88%;
+        margin: 0px auto;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+}

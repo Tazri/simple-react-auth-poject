@@ -1,0 +1,33 @@
+.mini-card{
+    display: flex;
+    flex-direction: row;
+    background-color: aliceblue;
+    padding: 10px 8px;
+    border-radius: 5px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.img-div{
+    width: 50%;
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-div img{
+    height: 40px;
+}
+
+.mini-card > div + div{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    padding-left: 10px ;
+    align-items: center;
+}
+
+.mini-card .mini-icon{
+    display: flex;
+    border: 2px solid red;
+}

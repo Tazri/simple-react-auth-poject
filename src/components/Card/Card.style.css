@@ -1,0 +1,26 @@
+.card{
+    background: rgb(251, 102, 102);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card div img{
+    width: 100%;
+    padding: 50px;
+}
+
+.card h2{
+    text-align: center;
+    color: aliceblue;
+    padding: 5px 0px 10px 0px;
+}
+
+@media (max-width: 500px){
+    .card{
+        width: 300px;
+    }
+
+    .card > div{
+        padding: 10px 48px;
+    }
+}

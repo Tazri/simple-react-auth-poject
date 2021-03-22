@@ -1,0 +1,62 @@
+.input-field{
+    margin: 60px 0px 20px 0px;
+}
+.input{
+    position: relative;
+    width: 100%; 
+    border-bottom: 1.5px solid rgba(7, 7, 7, 0.248);
+}
+
+.label{
+    position: absolute;
+    left: 0px;
+    bottom: 3px;
+    font-size: 18px;
+    color: rgb(102, 101, 101);
+    transition: all 0.4s ease;
+}
+
+.input input{
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    transition: all 0.5s linear;
+    padding-bottom: 4px ;
+}
+
+input:focus,input:active{
+    outline: none;
+}
+
+.input .underline{
+    position: absolute;
+    left: 0px;
+    width: 0%;
+    border-bottom: 1.5px solid skyblue;
+    background-color: skyblue ;
+    transition: all 0.5s ease;
+}
+
+
+.input input:focus+div{
+    width: 100%;
+}
+
+.input input:focus ~ .label,
+.input input:valid ~ .label{
+    color: skyblue;
+    transform: translateY(-24px);
+    font-size: 15px;
+}
+
+.input input:invalid{
+    border: none;
+    box-shadow: none;
+}
+
+.input-field p{
+    color: rgb(255, 0, 128);
+    margin: 10px 0px;
+    font-size: 13px;
+}

@@ -1,0 +1,79 @@
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+header h1{
+    color: rgb(255, 0, 255);
+}
+
+header ul{
+    list-style: none;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0px 15px 0px 0px;
+    cursor: pointer;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: rgb(89, 43, 89);
+    font-size: 16px;
+    transition: all 0.4s ease;
+}
+
+header ul li a::-moz-focus-outer,header ul li a::-moz-focus-inner{
+    outline: none;
+    border: none;
+}
+
+header ul .auth{
+    background: rgb(255, 0, 255);
+    color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+header ul li a:hover{
+    color: rgb(255, 0, 255);
+    text-decoration: none;
+}
+
+header ul .auth:hover{
+    color: aliceblue;
+}
+
+.active a{
+    color: rgb(255, 0, 255);
+}
+
+
+@media (min-width: 1200px){
+    header{
+        width: 88%;
+        margin: 0px auto;
+    }
+}
+
+@media (max-width: 720px) {
+    header{
+        flex-direction: column;
+    }
+
+    header ul{
+        margin: 25px 0px;
+    }
+
+    header ul li{
+        margin: 0px 10px 0px 0px;
+    }
+
+    li:last-child{
+        padding: 10px 10px;
+    }
+}

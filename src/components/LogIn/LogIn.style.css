@@ -1,0 +1,80 @@
+.login-body{
+    background: aliceblue;
+    height: 130vh;
+}
+
+.login{
+    min-width: 300px;
+    width: 60%;
+    border: 0.3px solid rgba(196, 196, 196, 0.652);
+    margin: 80px auto 0px auto;
+    padding: 20px 40px;
+    border-radius: 7px;
+}
+
+.login h1{
+    color: rgb(255, 0, 255);
+    font-size: 25px;
+    margin-bottom: 30px ;
+}
+
+.forget-password{
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.forget-password input{
+    margin-right: 5px;
+}
+
+.forget-password p{
+    color: rgb(255, 0, 255);
+    text-decoration: underline solid rgb(255, 0, 255);
+    cursor: pointer;
+}
+
+.login button{
+    width: 100%;
+    margin: 50px 0px 20px 0px;
+    font-size: 15px;
+    padding: 10px;
+    background: rgb(255, 0, 255);
+    color: aliceblue;
+    border: 2px solid rgb(255, 0, 255);
+    cursor: pointer;
+}
+
+.login  p{
+    text-align: center;
+}
+
+.login p span{
+    color: rgb(255, 0, 255);
+    text-decoration: underline solid rgb(255, 0, 255);
+    cursor: pointer;
+    user-select: none;
+}
+
+button::-moz-focus-inner,button::-moz-focus-outer{
+    border: none;
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+
+@media (max-width: 600px){
+    .login{
+        min-width: 470px;
+    }
+}
+
+@media (max-width: 550px){
+    .login{
+        min-width: 97%;
+    }
+}

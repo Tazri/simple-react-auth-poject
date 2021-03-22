@@ -1,0 +1,50 @@
+.sign-in-with{
+    min-width: 300px;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px 40px;
+    background: aliceblue;
+}
+
+.or-line{
+    display: flex;
+    align-items: center;
+}
+
+.or-line hr{
+    height: 1px;
+    width: 48%;
+    color: rgba(196, 196, 196, 0.652);
+}
+
+.or-line span{
+    margin: 0px 3px;
+    font-size: 18px;
+    color: rgb(43, 42, 42);
+}
+
+.sign-in-media div{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(196, 196, 196, 0.652);
+    margin: 20px 0px;
+    padding: 5px;
+    border-radius: 50px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.sign-in-media div p{
+    text-align: center;
+    width: 90%;
+}
+
+.sign-in-media div img{
+    height: 100%;
+}
+
+@media (max-width: 550px){
+    .sign-in-with{
+        width: 97%;
+    }   
+}

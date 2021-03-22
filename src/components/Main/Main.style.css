@@ -1,0 +1,33 @@
+main{
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px ;
+    padding: 14px;
+}
+
+
+@media (min-width: 1200px){
+    main{
+        width: 88%;
+        margin: 150px auto;
+    }
+}
+
+@media (max-width: 720px){
+    main{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 500px){
+    main{
+        margin: 10px 0px;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+        border-top: 1px solid rgb(44, 0, 44);
+        padding: 30px;
+    }
+}
+

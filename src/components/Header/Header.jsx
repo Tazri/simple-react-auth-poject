@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../UserProvider/UserProvider';
 import './Header.css';
 
 const Header = props => {
+    let {
+        user,
+        isAuthenticate
+    } = useContext(UserContext);
+
     let {active} = props;
+
+
     return (
         <header>
             <h1>Arubian Tickets</h1>
@@ -22,10 +30,13 @@ const Header = props => {
                     <Link to="/contact">Contact</Link>
                 </li>
 
+                {
+                    user.userName && <li><Link to={`./profile/${user.userName}`}>{user.userName}</Link></li>
+                }
 
-                <Link to="/signup">
-                    <li className="auth">Login</li>
-                </Link>
+                {
+                    isAuthenticate || <Link to="/signup"><li className="auth">Login</li></Link>
+                }
             </ul>
         </header>
     );

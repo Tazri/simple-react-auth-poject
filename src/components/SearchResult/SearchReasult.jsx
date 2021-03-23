@@ -10,7 +10,6 @@ const SearchReasult = props => {
         data
     } = props;
 
-    let one = data[0];
 
     let miniCards = data.map(obj=><MiniCard seat={obj.seat} price={obj.price} key={Math.random()} />)
 

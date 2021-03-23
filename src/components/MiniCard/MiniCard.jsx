@@ -6,7 +6,6 @@ import car from './../../img/car.png';
 import train from './../../img/train.png';
 import GroupIcon from '@material-ui/icons/Group';
 import { useParams } from 'react-router-dom';
-import { rgbToHex } from '@material-ui/core';
 
 const MiniCard = props => {
     let {

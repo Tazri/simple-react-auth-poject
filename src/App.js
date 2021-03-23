@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import UserProvider from './components/UserProvider/UserProvider';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, useLocation} from 'react-router-dom'
 import Home from './components/Home/Home';
 import './App.css'
 import LogIn from './components/LogIn/LogIn';
@@ -8,8 +8,10 @@ import SignUp from './components/SignUp/SignUp';
 import Destination from './components/Destination/Destination';
 import Media from './components/Media/Media';
 import Contact from './components/Contact/Contact';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const App = () => {
+
   return (
     <UserProvider>
       <Router>
@@ -27,13 +29,13 @@ const App = () => {
             <SignUp />
           </Route>
 
-          <Route path="/destination">
+          <PrivateRoute path="/destination">
               <Destination />
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/media/:media">
+          <PrivateRoute path="/media/:media">
             <Media />
-          </Route>
+          </PrivateRoute>
 
           <Route path="/contact">
             <Contact />

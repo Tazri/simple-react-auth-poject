@@ -55,8 +55,9 @@ input:focus,input:active{
     box-shadow: none;
 }
 
-.input-field p{
+.input-field .input-error{
     color: rgb(255, 0, 128);
     margin: 10px 0px;
     font-size: 13px;
+    text-align: left;
 }

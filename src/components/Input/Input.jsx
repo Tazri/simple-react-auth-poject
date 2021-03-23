@@ -10,7 +10,7 @@ const Input = props => {
         setValue
     } = props;
 
-    let errorMessage = <p>* {error}</p>
+    let errorMessage = <p className="input-error">* {error}</p>
     return (
         <div className="input-field">
         <div className="input">
@@ -25,7 +25,7 @@ const Input = props => {
             <label htmlFor={label} className="label">{label}</label>
         </div>
 
-        {error && errorMessage}
+        {error && errorMessage }
         </div>
     );
 };

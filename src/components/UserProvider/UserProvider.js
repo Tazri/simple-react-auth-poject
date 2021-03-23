@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { signUp } from '../../logic/Authentication';
+import { signUp,logIn, signInWithGoogle, signInWithFacebook } from '../../logic/Authentication';
 
 const UserContext = createContext();
 
@@ -15,19 +15,36 @@ const UserProvider = props => {
     let [user,setUser] = useState({});
 
     function signUpHandler(event){
-        signUp({userName,userEmail,userPassword,userConfirmPassword,error,setError});
+        signUp({userName,userEmail,userPassword,userConfirmPassword,error,setError,setIsAuthenticate,isAuthenticate,user,setUser});
+    }
+
+    function logInHandler(event){
+        logIn({email,password,error,setError,setIsAuthenticate,setUser})
+    }
+
+    function googleSignIn() {
+        signInWithGoogle(setUser,setIsAuthenticate)
+    }
+
+    function facebookSignIn() {
+        signInWithFacebook(setUser,setIsAuthenticate);
     }
 
     let state = {
         isAuthenticate,
         setIsAuthenticate,
         signUpHandler,
+        logInHandler,
         newUserName : [userName,setUserName],
         newUserEmail : [userEmail,setUserEmail],
         newUserPassword : [userPassword,setUserPassword],
         newUserConfirmPassword : [userConfirmPassword,setUserConfirmPassword],
         userEmail : [email,setEmail],
-        userPassword : [password,setPassword]
+        userPassword : [password,setPassword],
+        error,
+        user,
+        googleSignIn,
+        facebookSignIn
     }
 
     return (

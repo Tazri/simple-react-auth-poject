@@ -68,6 +68,14 @@ button:focus{
     outline: none;
 }
 
+.login .login-error{
+    color: rgb(255, 0, 255);
+    text-align: left;
+    background-color: rgba(208, 204, 204, 0.57);
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
 
 @media (max-width: 600px){
     .login{

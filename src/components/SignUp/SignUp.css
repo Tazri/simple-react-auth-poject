@@ -1,5 +1,6 @@
 .sign-up{
     margin: 0px auto;
-    height: 150vh;
+    height: 170vh;
+    min-height: 1100px;
     background: aliceblue;
 }

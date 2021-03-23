@@ -28,6 +28,9 @@
 
 }
 
-@media (max-width: 720px) {
-
+@media (max-width: 800px) {
+    .media-container{
+        flex-direction: column;
+        align-items: center;   
+    }
 }

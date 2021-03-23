@@ -1,6 +1,8 @@
 .login-body{
     background: aliceblue;
-    height: 130vh;
+    min-height: 800px;
+    height: 150vh;
+    min-height: 1100px;
 }
 
 .login{

@@ -19,6 +19,10 @@
     height: 40px;
 }
 
+.img-div p{
+    text-transform: capitalize;
+}
+
 .mini-card > div + div{
     display: flex;
     width: 50%;
@@ -29,5 +33,6 @@
 
 .mini-card .mini-icon{
     display: flex;
-    border: 2px solid red;
+    align-items: center;
 }
+

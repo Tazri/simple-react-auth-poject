@@ -4,10 +4,6 @@ import SearchCard from '../SearchCard/SearchCard';
 import SearchReasult from '../SearchResult/SearchReasult';
 import fakeData from './../../fakedata/fakedata.json';
 import './SearchBody.css';
-import car from './../../img/car.png';
-import bike from './../../img/bike.png';
-import bus from './../../img/train.png';
-import train from './../../img/bus.png';
 
 const SearchBody = () => {
     let [result,setResult] = useState([]);
@@ -20,7 +16,13 @@ const SearchBody = () => {
     } = useParams();
 
     function onSearchButtonHandler(){
-        setResult(fakeData[media]);
+        if(!to.trim() || !from.trim()){
+            setError('Please Enter Place Name To and From correctly.');
+        }
+        else{
+            setResult(fakeData[media]);
+            setError('');
+        }
     }
 
 
@@ -29,9 +31,11 @@ const SearchBody = () => {
             {!result.length && <SearchCard 
                 onClick={onSearchButtonHandler} 
                 error={error}
+                to={[to,setTo]}
+                from={[from,setFrom]}
                  />}
 
-            {result.length ? <SearchReasult data={result} from="Mirpur" to="Dhanmondi" /> : null}
+            {result.length ? <SearchReasult data={result}  from={from} to={to} /> : null}
         </div>
     );
 };

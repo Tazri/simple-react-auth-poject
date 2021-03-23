@@ -72,27 +72,27 @@
     "train":[
         {
             "seat":"50",
-            "price":"1090"
+            "price":"90"
         },
         {
-            "seat":"100",
-            "price":"2304"
+            "seat":"10",
+            "price":"304"
         },
         {
-            "seat":"134",
-            "price":"1490"
+            "seat":"13",
+            "price":"190"
         },
         {
             "seat":"23",
             "price":"32"
         },
         {
-            "seat":"164",
-            "price":"1367"
+            "seat":"16",
+            "price":"136"
         },
         {
-            "seat":"342",
-            "price":"3432"
+            "seat":"34",
+            "price":"342"
         }
     ]
 }

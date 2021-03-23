@@ -6,8 +6,13 @@ const SearchReasult = props => {
     
     let {
         from,
-        to
+        to,
+        data
     } = props;
+
+    let one = data[0];
+
+    let miniCards = data.map(obj=><MiniCard seat={obj.seat} price={obj.price} key={Math.random()} />)
 
     return (
         <div className="search-reasult search-card">
@@ -23,7 +28,7 @@ const SearchReasult = props => {
             </div>
 
             <div className="mini-card-container">
-                <MiniCard />
+                {miniCards}
             </div>
         </div>
     );

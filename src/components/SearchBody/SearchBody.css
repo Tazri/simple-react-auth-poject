@@ -1,3 +1,10 @@
 .search-body{
     width: 28%;
 }
+
+@media (max-width: 800px) {
+    .search-body{
+        width: 90%;
+        margin: 20px 0px;   
+    }
+}

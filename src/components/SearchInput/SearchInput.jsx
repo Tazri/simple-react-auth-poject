@@ -4,14 +4,22 @@ import './SearchInput.css';
 const SearchInput = props => {
     let {
         label,
-        name
+        name,
+        valueAndSetValue
     } = props
+
+    let [value,setValue] = valueAndSetValue;
 
     return (
         <div className="search-input">
             <label htmlFor={name}>{label}</label>
             <input 
-                type="text"/>
+                type="text"
+                value={value}
+                onChange={event =>{
+                    setValue(event.target.value);
+                }}
+                />
         </div>
     );
 };

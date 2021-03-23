@@ -5,11 +5,22 @@ import bus from './../../img/bus.png';
 import car from './../../img/car.png';
 import train from './../../img/train.png';
 import GroupIcon from '@material-ui/icons/Group';
+import { useParams } from 'react-router-dom';
+import { rgbToHex } from '@material-ui/core';
 
-const MiniCard = () => {
-    let media = 'bike';
+const MiniCard = props => {
+    let {
+        media
+    } = useParams();
+
+    let {
+        seat,
+        price
+    } = props
+
     let imgSrc = null;
 
+    
     if(media === 'bike'){
         imgSrc = bike;
     }else if(media === 'bus'){
@@ -20,17 +31,21 @@ const MiniCard = () => {
         imgSrc = train;
     }
 
+    let iconStyle = {
+        color: 'rgba(150, 148, 148, 0.638)'
+    }
+
     return (
         <div className="mini-card">
             <div className="img-div">
-                <img src={imgSrc} alt="bike"/>
+                <img src={imgSrc} alt={media}/>
 
-                <p>Bike</p>
+                <p>{media}</p>
             </div>
             <div>
-                <div className="mini-icon"><GroupIcon /><p>36</p></div>
+                <div className="mini-icon"><GroupIcon style={iconStyle} /><p>{seat}</p></div>
 
-                <p>$65</p>
+                <p>${price}</p>
             </div>
         </div>
     );

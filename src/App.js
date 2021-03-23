@@ -7,6 +7,7 @@ import LogIn from './components/LogIn/LogIn';
 import SignUp from './components/SignUp/SignUp';
 import Destination from './components/Destination/Destination';
 import Media from './components/Media/Media';
+import Contact from './components/Contact/Contact';
 
 const App = () => {
   return (
@@ -32,6 +33,10 @@ const App = () => {
 
           <Route path="/media/:media">
             <Media />
+          </Route>
+
+          <Route path="/contact">
+            <Contact />
           </Route>
         </Switch>
       </Router>

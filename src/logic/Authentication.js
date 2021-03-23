@@ -89,7 +89,17 @@ function signInWithGoogle(setUser,setIsAuthenticate){
 }
 
 function signInWithFacebook(setUser,setIsAuthenticate) {
-    console.log('This is facebook');
+    let provider = new firebase.auth.FacebookAuthProvider();
+
+    firebase.auth().signInWithPopup(provider)
+        .then(result =>{
+            let userName = result.user.displayName;
+            setUser({userName});
+            setIsAuthenticate(true);
+        })
+        .catch(e=>{
+            console.log(e.message);
+        })
 }
 
 export {signUp,logIn,signInWithGoogle,signInWithFacebook};

@@ -9,6 +9,7 @@ import Destination from './components/Destination/Destination';
 import Media from './components/Media/Media';
 import Contact from './components/Contact/Contact';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Profile from './components/Profile/Profile';
 
 const App = () => {
 
@@ -39,6 +40,10 @@ const App = () => {
 
           <Route path="/contact">
             <Contact />
+          </Route>
+
+          <Route>
+            <Profile />
           </Route>
         </Switch>
       </Router>
